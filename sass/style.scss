@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lobster', cursive;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px;
+    position: absolute;
+}
+
+.navigation-link {
+    padding-right: 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+}
+
+.navigation-link:hover {
+    color: #E5D1FA;
+}
+
+.first-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-greeting {
+    font-size: 70px;
+    color: #fff;
+}
+
+.text-subtitle {
+    font-size: 40px;
+    color: #fff;
+    padding-top: 50px;
+    text-transform: uppercase;
+}
+
+.img {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../img/4.jpg");
+}
+
+.first-module {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cta-button {
+    color: #fff;
+    background-color: #9F73AB;
+    border: none;
+    margin: 20px;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.4s;
+    font-size: 24px;
+    border-radius: 30px;
+    padding: 24px;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: #624F82;
+}
+
+.card-body {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.services {
+    margin: 200px auto;
+}
+
+.services-item {
+    text-align: center;
+    margin-bottom: 70px;
+    font-size: 40px;
+}
+
+.card-body-portfolio {
+    background-color: gray;
+}
+
+.card-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.product {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 25px;
+}
+
+
+.text-icons {
+    margin-bottom: 10px;
+}
+
+.text-description {
+    text-align: center;
+}
+
+.icons-footer {
+    display: none;
+}
+
+.footer-link {
+    list-style: none;
+    text-decoration: none;
+    padding-right: 30px;
+    font-size: 30px;
+    color: black;
+}
+
+.footer-link:hover {
+    color: #624F82;
+}
+
+.footer {
+    margin: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 767px) {
+    .card-body {
+        margin-top: 30px;
+    }
+
+    .first-module {
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .navigation-main {
+        text-align: center;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .text-greeting {
+        text-align: center;
+    }
+
+    .product {
+        justify-content: center;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}
