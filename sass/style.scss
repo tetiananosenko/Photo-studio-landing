@@ -1,3 +1,11 @@
+$white: #fff;
+
+@mixin flex-col-centre {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,29 +29,27 @@ body {
 .navigation-link {
     padding-right: 15px;
     text-decoration: none;
-    color: #fff;
+    color: $white;
     font-size: 30px;
-}
 
-.navigation-link:hover {
-    color: #E5D1FA;
+    &:hover {
+        color: #E5D1FA;
+    }
 }
 
 .first-section {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include flex-col-centre;
     justify-content: center;
 }
 
 .text-greeting {
     font-size: 70px;
-    color: #fff;
+    color: $white;
 }
 
 .text-subtitle {
     font-size: 40px;
-    color: #fff;
+    color: $white;
     padding-top: 50px;
     text-transform: uppercase;
 }
@@ -56,13 +62,11 @@ body {
 }
 
 .first-module {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include flex-col-centre;
 }
 
 .cta-button {
-    color: #fff;
+    color: $white;
     background-color: #9F73AB;
     border: none;
     margin: 20px;
@@ -74,16 +78,14 @@ body {
     padding: 24px;
     margin-top: 50px;
     text-transform: uppercase;
-}
 
-.cta-button:hover {
-    background-color: #624F82;
+    &:hover {
+            background-color: #624F82;
+        }
 }
 
 .card-body {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
+    @include flex-col-centre;
 }
 
 .services {
@@ -101,9 +103,7 @@ body {
 }
 
 .card-text {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include flex-col-centre;
     padding-top: 25px;
     padding-bottom: 25px;
 }
@@ -135,10 +135,10 @@ body {
     padding-right: 30px;
     font-size: 30px;
     color: black;
-}
 
-.footer-link:hover {
-    color: #624F82;
+    &:hover {
+            color: #624F82;
+        }
 }
 
 .footer {
