@@ -1,4 +1,11 @@
 $white: #fff;
+$mobile-breakpoint: 767px;
+
+@mixin for-phone-only {
+    @media (max-width: $mobile-breakpoint) {
+        @content;
+    }
+}
 
 @mixin flex-col-centre {
     display: flex;
@@ -24,6 +31,21 @@ body {
     justify-content: space-between;
     padding: 20px 80px;
     position: absolute;
+
+    @include for-phone-only {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+}
+
+
+.navigation-main {
+    text-align: center;
+
+    @include for-phone-only {
+        text-align: center;
+    }
 }
 
 .navigation-link {
@@ -45,6 +67,10 @@ body {
 .text-greeting {
     font-size: 70px;
     color: $white;
+
+    @include for-phone-only {
+        text-align: center;
+    }
 }
 
 .text-subtitle {
@@ -63,6 +89,11 @@ body {
 
 .first-module {
     @include flex-col-centre;
+
+    @include for-phone-only {
+        padding: 0 10px;
+        text-align: center;
+    }
 }
 
 .cta-button {
@@ -80,12 +111,16 @@ body {
     text-transform: uppercase;
 
     &:hover {
-            background-color: #624F82;
-        }
+        background-color: #624F82;
+    }
 }
 
 .card-body {
     @include flex-col-centre;
+
+    @include for-phone-only {
+        margin-top: 30px;
+    }
 }
 
 .services {
@@ -114,6 +149,11 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 25px;
+
+    @include for-phone-only {
+        justify-content: center;
+
+    }
 }
 
 
@@ -137,8 +177,8 @@ body {
     color: black;
 
     &:hover {
-            color: #624F82;
-        }
+        color: #624F82;
+    }
 }
 
 .footer {
@@ -146,37 +186,9 @@ body {
     text-align: center;
     display: flex;
     justify-content: space-around;
-}
 
-@media (max-width: 767px) {
-    .card-body {
-        margin-top: 30px;
-    }
-
-    .first-module {
-        padding: 0 10px;
-        text-align: center;
-    }
-
-    .navigation-main {
-        text-align: center;
-    }
-
-    .header {
+    @include for-phone-only {
         flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
 
-    .text-greeting {
-        text-align: center;
-    }
-
-    .product {
-        justify-content: center;
-    }
-
-    .footer {
-        flex-direction: column;
     }
 }
